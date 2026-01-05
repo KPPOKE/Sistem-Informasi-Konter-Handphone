@@ -1,0 +1,8 @@
+# GadgetHub - Apache Configuration
+
+# Redirect to public folder
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^$ public/ [L]
+    RewriteRule ^((?!public/).*)$ public/$1 [L]
+</IfModule>
