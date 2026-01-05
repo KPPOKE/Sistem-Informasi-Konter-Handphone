@@ -1,5 +1,4 @@
 <?php
-// PRODUCTION CONFIG - gadgethub.07tple001.fun
 define('BASEURL', 'http://gadgethub.07tple001.fun');
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'sql_GadgetHub_07tple001_fun');

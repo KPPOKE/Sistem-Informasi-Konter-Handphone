@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GadgetHub - Pusat Handphone & Aksesoris</title>
     
-    <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
     
     <style>
@@ -640,7 +636,7 @@
     </style>
 </head>
 <body id="top">
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-home fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#top">
@@ -672,7 +668,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero-section">
         <div class="container">
             <div class="row align-items-center">
@@ -706,7 +701,6 @@
         </div>
     </header>
 
-    <!-- Features Section -->
     <section class="features-section">
         <div class="container">
             <div class="row g-4">
@@ -750,7 +744,6 @@
         </div>
     </section>
 
-    <!-- Catalog Section -->
     <section id="katalog" class="catalog-section">
         <div class="container">
             <div class="text-center">
@@ -758,7 +751,6 @@
                 <p class="section-subtitle">Pilihan terbaik untuk kebutuhan gadget Anda</p>
             </div>
 
-            <!-- Search & Filter -->
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto">
                     <div class="search-filter-box">
@@ -772,7 +764,6 @@
                 </div>
             </div>
 
-            <!-- Category Filter -->
             <div class="text-center mb-4">
                 <div class="btn-group category-filter" role="group">
                     <button type="button" class="btn btn-outline-primary active" data-category="all">
@@ -839,7 +830,6 @@
                     </div>
                 </div>
 
-                <!-- Booking Modal -->
                 <div class="modal fade" id="bookingModal<?= $product['id']; ?>" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -881,7 +871,6 @@
         </div>
     </section>
 
-    <!-- Testimonial Section -->
     <section class="testimonial-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -944,7 +933,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Siap Upgrade Gadget Anda?</h2>
@@ -955,7 +943,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-home">
         <div class="container">
             <div class="row">
@@ -984,18 +971,16 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6281234567890?text=Halo%20GadgetHub,%20saya%20ingin%20bertanya%20tentang%20produk" target="_blank" class="floating-whatsapp" title="Chat WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Booking Success Modal -->
     <?php if(isset($data['booking_success'])): ?>
     <div class="modal fade" id="bookingSuccessModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="border: none; border-radius: 20px; overflow: hidden;">
                 <div class="modal-body p-0">
-                    <!-- Success Header -->
+                    
                     <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 40px 32px; text-align: center; color: white;">
                         <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; animation: scaleIn 0.5s ease;">
                             <i class="fas fa-check-circle" style="font-size: 48px;"></i>
@@ -1004,7 +989,6 @@
                         <p style="opacity: 0.95; margin: 0;">Pesanan Anda telah kami terima</p>
                     </div>
 
-                    <!-- Booking Info -->
                     <div style="padding: 32px;">
                         <div style="background: var(--gray-50); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
                             <div style="text-align: center; margin-bottom: 16px;">
@@ -1036,7 +1020,6 @@
                             </div>
                         </div>
 
-                        <!-- Important Info -->
                         <div style="background: var(--warning-50); border-left: 4px solid var(--warning-500); padding: 16px; border-radius: 8px; margin-bottom: 24px;">
                             <div style="display: flex; gap: 12px;">
                                 <i class="fas fa-info-circle" style="color: var(--warning-600); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
@@ -1047,7 +1030,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons -->
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                             <a href="<?= BASEURL; ?>/HomeController/checkBooking" class="btn btn-outline-primary" style="border-radius: 12px; padding: 12px; font-weight: 600;">
                                 <i class="fas fa-search me-2"></i>Cek Status
@@ -1080,14 +1062,13 @@
     </style>
 
     <script>
-        // Auto show modal on page load
+         
         document.addEventListener('DOMContentLoaded', function() {
             var successModal = document.getElementById('bookingSuccessModal');
             if(successModal) {
                 var modal = new bootstrap.Modal(successModal);
                 modal.show();
                 
-                // Auto copy booking code
                 setTimeout(function() {
                     copyBookingCode();
                 }, 500);
@@ -1147,7 +1128,6 @@
             });
         }, observerOptions);
 
-        // Scroll animations for all elements
         document.querySelectorAll('.product-card-home, .feature-card').forEach((el, index) => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
@@ -1155,7 +1135,6 @@
             observer.observe(el);
         });
 
-        // Animate sections on scroll
         const sections = document.querySelectorAll('.features-section, .catalog-section, .cta-section, .testimonial-section');
         sections.forEach(section => {
             section.style.opacity = '0';
@@ -1164,7 +1143,6 @@
             observer.observe(section);
         });
 
-        // Animate section titles
         const sectionTitles = document.querySelectorAll('.section-title, .section-subtitle');
         sectionTitles.forEach((title, index) => {
             title.style.opacity = '0';
@@ -1235,7 +1213,6 @@
                 
                 const matchesSearch = productName.includes(searchTerm);
                 
-                // Check if filter matches category name OR product type
                 let matchesCategory = currentCategory === 'all' || 
                                      productCategory === currentCategory ||
                                      productType === currentCategory.toLowerCase();

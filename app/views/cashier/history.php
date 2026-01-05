@@ -49,7 +49,6 @@
     </table>
 </div>
 
-<!-- Detail Modal -->
 <div class="modal fade" id="detailModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">

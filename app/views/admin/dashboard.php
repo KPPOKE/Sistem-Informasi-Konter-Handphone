@@ -11,7 +11,6 @@
         </div>
     </div>
 
-
     <div class="stat-card">
         <div class="stat-icon warning">
             <i class="fas fa-exclamation-triangle"></i>
@@ -21,7 +20,6 @@
             <div class="stat-value warning"><?= number_format($data['low_stock']); ?></div>
         </div>
     </div>
-
 
     <div class="stat-card">
         <div class="stat-icon primary">
@@ -33,7 +31,6 @@
         </div>
     </div>
 
-
     <div class="stat-card">
         <div class="stat-icon success">
             <i class="fas fa-chart-line"></i>
@@ -44,7 +41,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="page-header mt-6">
     <h2 class="page-title">Quick Access</h2>

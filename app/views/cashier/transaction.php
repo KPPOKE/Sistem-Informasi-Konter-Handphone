@@ -1,12 +1,11 @@
 <div class="transaction-layout">
-    <!-- Product Grid Area -->
+    
     <div class="transaction-products">
-        <!-- Search Box -->
+        
         <div class="search-box">
             <input type="text" class="search-input" id="searchProduct" placeholder="Cari produk...">
         </div>
 
-        <!-- Products Grid -->
         <div class="products-grid" id="productGrid">
             <?php foreach($data['products'] as $product): ?>
             <div class="product-card <?= $product['stock'] <= 0 ? 'out-of-stock' : '' ?>" 
@@ -31,7 +30,6 @@
         </div>
     </div>
 
-    <!-- Cart Panel -->
     <div class="cart-panel" id="cartPanel">
         <div class="cart-header">
             <h3>
@@ -42,7 +40,7 @@
         </div>
 
         <div class="cart-items" id="cartItems">
-            <!-- Empty State -->
+            
             <div class="cart-empty" id="emptyCartMsg">
                 <i class="fas fa-shopping-basket"></i>
                 <p>Keranjang kosong</p>
@@ -62,7 +60,6 @@
     </div>
 </div>
 
-<!-- Checkout Modal -->
 <div class="modal fade" id="checkoutModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -99,7 +96,6 @@
     </div>
 </div>
 
-<!-- Mobile Cart Toggle Button -->
 <button class="btn btn-primary btn-cart-toggle" id="cartToggle" style="display: none; position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; z-index: 1000;">
     <i class="fas fa-shopping-cart"></i>
     <span class="cart-count" id="mobileCartCount" style="position: absolute; top: -5px; right: -5px;">0</span>

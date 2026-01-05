@@ -63,7 +63,6 @@
                 </td>
             </tr>
 
-            <!-- Edit Modal -->
             <div class="modal fade" id="editProductModal<?= $product['id']; ?>" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -121,7 +120,6 @@
     </table>
 </div>
 
-<!-- Add Modal -->
 <div class="modal fade" id="addProductModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

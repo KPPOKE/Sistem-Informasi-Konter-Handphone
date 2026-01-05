@@ -2,7 +2,7 @@
 
 class BookingModel extends Model {
     public function createBooking($data) {
-        // Generate booking code
+         
         $bookingCode = $this->generateBookingCode();
         
         $query = "INSERT INTO bookings (booking_code, product_id, customer_name, customer_phone, status) VALUES (:booking_code, :product_id, :customer_name, :customer_phone, 'pending')";

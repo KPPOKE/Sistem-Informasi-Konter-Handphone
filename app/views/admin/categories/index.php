@@ -45,7 +45,6 @@
                 </td>
             </tr>
 
-            <!-- Edit Modal -->
             <div class="modal fade" id="editCategoryModal<?= $cat['id']; ?>" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -75,7 +74,6 @@
     </table>
 </div>
 
-<!-- Add Category Modal -->
 <div class="modal fade" id="addCategoryModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

@@ -126,17 +126,33 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     line-height: var(--leading-tight);
     color: var(--gray-900);
     margin-top: 0;
 }
 
-h1 { font-size: var(--font-size-3xl); }
-h2 { font-size: var(--font-size-2xl); }
-h3 { font-size: var(--font-size-xl); }
-h4 { font-size: var(--font-size-lg); }
+h1 {
+    font-size: var(--font-size-3xl);
+}
+
+h2 {
+    font-size: var(--font-size-2xl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+}
 
 p {
     margin-top: 0;
@@ -191,8 +207,15 @@ a:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -1325,50 +1348,145 @@ textarea.form-control {
 /* ============================================
    20. UTILITIES
    ============================================ */
-.text-primary { color: var(--primary-600) !important; }
-.text-success { color: var(--success-600) !important; }
-.text-warning { color: var(--warning-600) !important; }
-.text-danger { color: var(--danger-600) !important; }
-.text-gray { color: var(--gray-500) !important; }
-.text-muted { color: var(--gray-400) !important; }
+.text-primary {
+    color: var(--primary-600) !important;
+}
 
-.bg-primary { background-color: var(--primary-500) !important; }
-.bg-success { background-color: var(--success-500) !important; }
-.bg-warning { background-color: var(--warning-500) !important; }
-.bg-danger { background-color: var(--danger-500) !important; }
+.text-success {
+    color: var(--success-600) !important;
+}
 
-.fw-medium { font-weight: 500; }
-.fw-semibold { font-weight: 600; }
-.fw-bold { font-weight: 700; }
+.text-warning {
+    color: var(--warning-600) !important;
+}
 
-.rounded-lg { border-radius: var(--radius-lg); }
-.rounded-xl { border-radius: var(--radius-xl); }
+.text-danger {
+    color: var(--danger-600) !important;
+}
 
-.shadow-sm { box-shadow: var(--shadow-sm); }
-.shadow-md { box-shadow: var(--shadow-md); }
-.shadow-lg { box-shadow: var(--shadow-lg); }
+.text-gray {
+    color: var(--gray-500) !important;
+}
 
-.mb-0 { margin-bottom: 0 !important; }
-.mb-2 { margin-bottom: var(--space-2) !important; }
-.mb-4 { margin-bottom: var(--space-4) !important; }
-.mb-6 { margin-bottom: var(--space-6) !important; }
+.text-muted {
+    color: var(--gray-400) !important;
+}
 
-.mt-0 { margin-top: 0 !important; }
-.mt-4 { margin-top: var(--space-4) !important; }
-.mt-6 { margin-top: var(--space-6) !important; }
+.bg-primary {
+    background-color: var(--primary-500) !important;
+}
 
-.p-4 { padding: var(--space-4) !important; }
-.p-5 { padding: var(--space-5) !important; }
-.p-6 { padding: var(--space-6) !important; }
+.bg-success {
+    background-color: var(--success-500) !important;
+}
 
-.gap-2 { gap: var(--space-2); }
-.gap-3 { gap: var(--space-3); }
-.gap-4 { gap: var(--space-4); }
+.bg-warning {
+    background-color: var(--warning-500) !important;
+}
 
-.d-flex { display: flex; }
-.align-items-center { align-items: center; }
-.justify-content-between { justify-content: space-between; }
-.flex-wrap { flex-wrap: wrap; }
+.bg-danger {
+    background-color: var(--danger-500) !important;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-2 {
+    margin-bottom: var(--space-2) !important;
+}
+
+.mb-4 {
+    margin-bottom: var(--space-4) !important;
+}
+
+.mb-6 {
+    margin-bottom: var(--space-6) !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-4 {
+    margin-top: var(--space-4) !important;
+}
+
+.mt-6 {
+    margin-top: var(--space-6) !important;
+}
+
+.p-4 {
+    padding: var(--space-4) !important;
+}
+
+.p-5 {
+    padding: var(--space-5) !important;
+}
+
+.p-6 {
+    padding: var(--space-6) !important;
+}
+
+.gap-2 {
+    gap: var(--space-2);
+}
+
+.gap-3 {
+    gap: var(--space-3);
+}
+
+.gap-4 {
+    gap: var(--space-4);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
 
 /* ============================================
    20.1 ADDITIONAL UTILITY CLASSES
@@ -1634,6 +1752,7 @@ textarea.form-control {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1645,6 +1764,7 @@ textarea.form-control {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1656,6 +1776,7 @@ textarea.form-control {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1667,6 +1788,7 @@ textarea.form-control {
         opacity: 0;
         transform: translateX(20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1678,6 +1800,7 @@ textarea.form-control {
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -1685,9 +1808,12 @@ textarea.form-control {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.7;
     }
@@ -1697,6 +1823,7 @@ textarea.form-control {
     from {
         transform: translateX(100%);
     }
+
     to {
         transform: translateX(0);
     }
@@ -1706,14 +1833,15 @@ textarea.form-control {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(100%);
     }
 }
 
-/* Page Content Fade-in Animation */
+/* Page Content Fade-in Animation - Faster for smoother feel */
 .main-content {
-    animation: fadeInUp 0.4s ease-out;
+    animation: fadeInUp 0.25s ease-out;
 }
 
 /* Staggered Animation for Cards */
@@ -1721,38 +1849,103 @@ textarea.form-control {
 .product-card,
 .quick-action-card,
 .card {
-    animation: fadeInUp 0.4s ease-out backwards;
-}
-
-.stat-card:nth-child(1) { animation-delay: 0.05s; }
-.stat-card:nth-child(2) { animation-delay: 0.1s; }
-.stat-card:nth-child(3) { animation-delay: 0.15s; }
-.stat-card:nth-child(4) { animation-delay: 0.2s; }
-
-.product-card:nth-child(1) { animation-delay: 0.02s; }
-.product-card:nth-child(2) { animation-delay: 0.04s; }
-.product-card:nth-child(3) { animation-delay: 0.06s; }
-.product-card:nth-child(4) { animation-delay: 0.08s; }
-.product-card:nth-child(5) { animation-delay: 0.1s; }
-.product-card:nth-child(6) { animation-delay: 0.12s; }
-.product-card:nth-child(7) { animation-delay: 0.14s; }
-.product-card:nth-child(8) { animation-delay: 0.16s; }
-
-/* Table Row Animation */
-.table tbody tr {
     animation: fadeInUp 0.3s ease-out backwards;
 }
 
-.table tbody tr:nth-child(1) { animation-delay: 0.02s; }
-.table tbody tr:nth-child(2) { animation-delay: 0.04s; }
-.table tbody tr:nth-child(3) { animation-delay: 0.06s; }
-.table tbody tr:nth-child(4) { animation-delay: 0.08s; }
-.table tbody tr:nth-child(5) { animation-delay: 0.1s; }
-.table tbody tr:nth-child(6) { animation-delay: 0.12s; }
-.table tbody tr:nth-child(7) { animation-delay: 0.14s; }
-.table tbody tr:nth-child(8) { animation-delay: 0.16s; }
-.table tbody tr:nth-child(9) { animation-delay: 0.18s; }
-.table tbody tr:nth-child(10) { animation-delay: 0.2s; }
+/* Faster, smoother delays for stat cards */
+.stat-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.03s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.06s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: 0.09s;
+}
+
+/* Minimal delays for product cards - almost simultaneous */
+.product-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.01s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.02s;
+}
+
+.product-card:nth-child(4) {
+    animation-delay: 0.03s;
+}
+
+.product-card:nth-child(5) {
+    animation-delay: 0.04s;
+}
+
+.product-card:nth-child(6) {
+    animation-delay: 0.05s;
+}
+
+.product-card:nth-child(7) {
+    animation-delay: 0.06s;
+}
+
+.product-card:nth-child(8) {
+    animation-delay: 0.07s;
+}
+
+/* Table Row Animation - faster and more subtle */
+.table tbody tr {
+    animation: fadeInUp 0.2s ease-out backwards;
+}
+
+.table tbody tr:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.table tbody tr:nth-child(2) {
+    animation-delay: 0.01s;
+}
+
+.table tbody tr:nth-child(3) {
+    animation-delay: 0.02s;
+}
+
+.table tbody tr:nth-child(4) {
+    animation-delay: 0.03s;
+}
+
+.table tbody tr:nth-child(5) {
+    animation-delay: 0.04s;
+}
+
+.table tbody tr:nth-child(6) {
+    animation-delay: 0.05s;
+}
+
+.table tbody tr:nth-child(7) {
+    animation-delay: 0.06s;
+}
+
+.table tbody tr:nth-child(8) {
+    animation-delay: 0.07s;
+}
+
+.table tbody tr:nth-child(9) {
+    animation-delay: 0.08s;
+}
+
+.table tbody tr:nth-child(10) {
+    animation-delay: 0.09s;
+}
 
 /* Enhanced Hover Transitions for Interactive Elements */
 .btn,
@@ -1964,6 +2157,7 @@ html {
 
 /* Reduce Motion for Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -1971,7 +2165,7 @@ html {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+
     html {
         scroll-behavior: auto;
     }

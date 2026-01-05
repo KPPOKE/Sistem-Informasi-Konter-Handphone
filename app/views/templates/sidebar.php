@@ -1,6 +1,6 @@
-<!-- Sidebar -->
+
 <aside id="sidebar-wrapper">
-    <!-- Logo -->
+    
     <div class="sidebar-logo">
         <h1>
             <i class="fas fa-mobile-alt"></i>
@@ -8,7 +8,6 @@
         </h1>
     </div>
     
-    <!-- Navigation -->
     <nav class="sidebar-nav">
         <?php 
         $current_url = $_GET['url'] ?? ''; 
@@ -76,7 +75,6 @@
         <?php endif; ?>
     </nav>
     
-    <!-- Logout Button -->
     <div class="sidebar-footer">
         <a href="<?= BASEURL; ?>/AuthController/logout" class="btn-logout">
             <i class="fas fa-sign-out-alt"></i>
@@ -85,9 +83,8 @@
     </div>
 </aside>
 
-<!-- Page Content Wrapper -->
 <div id="page-content-wrapper">
-    <!-- Topbar -->
+    
     <header class="topbar">
         <div class="topbar-left">
             <button class="menu-toggle" id="menu-toggle">
@@ -108,6 +105,5 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
         <?php Flasher::flash(); ?>

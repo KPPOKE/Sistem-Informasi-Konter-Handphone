@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $data['product']['name']; ?> - GadgetHub</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
     
     <style>
@@ -279,7 +275,7 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-home fixed-top">
         <div class="container">
             <a class="navbar-brand" href="<?= BASEURL; ?>">
@@ -311,11 +307,10 @@
         </div>
     </nav>
 
-    <!-- Product Detail Section -->
     <section class="product-detail-section">
         <div class="container">
             <div class="row g-4">
-                <!-- Product Image -->
+                
                 <div class="col-lg-5">
                     <div class="product-image-box">
                         <?php 
@@ -340,7 +335,6 @@
                     </div>
                 </div>
 
-                <!-- Product Info -->
                 <div class="col-lg-7">
                     <div class="product-info-box">
                         <span class="product-category-badge"><?= $data['product']['category_name'] ?? 'Gadget'; ?></span>
@@ -351,7 +345,6 @@
                             <?= $data['product']['description'] ? nl2br(htmlspecialchars($data['product']['description'])) : 'Produk berkualitas tinggi dengan garansi resmi. Dapatkan penawaran terbaik untuk kebutuhan gadget Anda.'; ?>
                         </p>
 
-                        <!-- Specifications -->
                         <div class="product-specs">
                             <h5 style="font-weight: 700; margin-bottom: 16px; color: var(--gray-900);">
                                 <i class="fas fa-list-ul me-2"></i>Spesifikasi
@@ -374,7 +367,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons -->
                         <?php if($data['product']['stock'] > 0): ?>
                         <button class="btn btn-primary btn-booking-detail" data-bs-toggle="modal" data-bs-target="#bookingModal">
                             <i class="fas fa-shopping-bag me-2"></i>Booking Sekarang
@@ -394,7 +386,6 @@
         </div>
     </section>
 
-    <!-- Related Products -->
     <?php if(!empty($data['related_products'])): ?>
     <section class="related-products-section">
         <div class="container">
@@ -421,7 +412,6 @@
     </section>
     <?php endif; ?>
 
-    <!-- Booking Modal -->
     <div class="modal fade" id="bookingModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -459,20 +449,18 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer-home">
         <div class="container">
             <p class="footer-text">&copy; 2024 GadgetHub. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Booking Success Modal -->
     <?php if(isset($_GET['booking']) && $_GET['booking'] == 'success' && isset($_SESSION['booking_success'])): ?>
     <div class="modal fade" id="bookingSuccessModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="border: none; border-radius: 20px; overflow: hidden;">
                 <div class="modal-body p-0">
-                    <!-- Success Header -->
+                    
                     <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 40px 32px; text-align: center; color: white;">
                         <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; animation: scaleIn 0.5s ease;">
                             <i class="fas fa-check-circle" style="font-size: 48px;"></i>
@@ -481,7 +469,6 @@
                         <p style="opacity: 0.95; margin: 0;">Pesanan Anda telah kami terima</p>
                     </div>
 
-                    <!-- Booking Info -->
                     <div style="padding: 32px;">
                         <div style="background: var(--gray-50); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
                             <div style="text-align: center; margin-bottom: 16px;">
@@ -513,7 +500,6 @@
                             </div>
                         </div>
 
-                        <!-- Important Info -->
                         <div style="background: var(--warning-50); border-left: 4px solid var(--warning-500); padding: 16px; border-radius: 8px; margin-bottom: 24px;">
                             <div style="display: flex; gap: 12px;">
                                 <i class="fas fa-info-circle" style="color: var(--warning-600); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
@@ -524,7 +510,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons -->
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                             <a href="<?= BASEURL; ?>/HomeController/checkBooking" class="btn btn-outline-primary" style="border-radius: 12px; padding: 12px; font-weight: 600;">
                                 <i class="fas fa-search me-2"></i>Cek Status
@@ -557,14 +542,13 @@
     </style>
 
     <script>
-        // Auto show modal on page load
+         
         document.addEventListener('DOMContentLoaded', function() {
             var successModal = document.getElementById('bookingSuccessModal');
             if(successModal) {
                 var modal = new bootstrap.Modal(successModal);
                 modal.show();
                 
-                // Auto copy booking code
                 setTimeout(function() {
                     copyBookingCode();
                 }, 500);
@@ -583,12 +567,11 @@
         }
     </script>
     <?php 
-    // Clear session after showing modal
+     
     unset($_SESSION['booking_success']);
     endif; 
     ?>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

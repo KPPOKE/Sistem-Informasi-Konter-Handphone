@@ -379,7 +379,7 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-home fixed-top">
         <div class="container">
             <a class="navbar-brand" href="<?= BASEURL; ?>">
@@ -411,10 +411,9 @@
         </div>
     </nav>
 
-    <!-- Check Booking Section -->
     <section class="check-booking-section">
         <div class="container">
-            <!-- Search Box -->
+            
             <div class="search-box-container">
                 <div class="search-icon">
                     <i class="fas fa-search"></i>
@@ -432,12 +431,11 @@
                 </form>
             </div>
 
-            <!-- Results -->
             <?php if(isset($data['booking'])): ?>
                 <?php if(!empty($data['booking'])): ?>
                     <?php foreach($data['booking'] as $booking): ?>
                     <div class="booking-result">
-                        <!-- Header -->
+                        
                         <div class="booking-header">
                             <div class="booking-code">
                                 Kode: <span><?= $booking['booking_code']; ?></span>
@@ -458,7 +456,6 @@
                             </div>
                         </div>
 
-                        <!-- Product Info -->
                         <div class="booking-product">
                             <div class="product-icon-box">
                                 <i class="fas fa-<?= $booking['type'] == 'hp' ? 'mobile-alt' : 'headphones'; ?>"></i>
@@ -470,7 +467,6 @@
                             </div>
                         </div>
 
-                        <!-- Booking Info -->
                         <div class="booking-info">
                             <div class="info-item">
                                 <div class="info-label">Nama Pemesan</div>
@@ -490,7 +486,6 @@
                             </div>
                         </div>
 
-                        <!-- Timeline -->
                         <h6 style="font-weight: 700; margin-bottom: 20px; color: var(--gray-900);">
                             <i class="fas fa-clock me-2"></i>Timeline Status
                         </h6>
@@ -518,7 +513,6 @@
                             </div>
                         </div>
 
-                        <!-- WhatsApp Contact -->
                         <div class="whatsapp-contact">
                             <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20menanyakan%20booking%20dengan%20kode%20<?= $booking['booking_code']; ?>" target="_blank">
                                 <i class="fab fa-whatsapp"></i>
@@ -543,7 +537,6 @@
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
