@@ -6,7 +6,6 @@ class HomeController extends Controller {
         $data['products'] = $this->model('ProductModel')->getAllProducts();
         
         // Check for booking success
-        session_start();
         if(isset($_SESSION['booking_success'])) {
             $data['booking_success'] = $_SESSION['booking_success'];
             unset($_SESSION['booking_success']);
@@ -27,9 +26,6 @@ class HomeController extends Controller {
         // Get related products (same category, exclude current product)
         $data['related_products'] = $this->model('ProductModel')->getRelatedProducts($data['product']['category_id'], $id);
         
-        // Start session for booking success modal
-        session_start();
-        
         $this->view('home/detail', $data);
     }
 
@@ -38,7 +34,6 @@ class HomeController extends Controller {
             $bookingCode = $this->model('BookingModel')->createBooking($_POST);
             if($bookingCode) {
                 // Store booking code in session
-                session_start();
                 $_SESSION['booking_success'] = [
                     'code' => $bookingCode,
                     'customer_name' => $_POST['customer_name'],

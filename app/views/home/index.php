@@ -63,10 +63,13 @@
         
         .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 0 0 100px;
+            padding: 120px 0 100px;
             color: #FFFFFF;
             position: relative;
             overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
         }
         
         .hero-section::before {
@@ -670,7 +673,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section" style="padding-top: 80px;">
+    <header class="hero-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -1144,11 +1147,30 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.product-card-home, .feature-card').forEach(el => {
+        // Scroll animations for all elements
+        document.querySelectorAll('.product-card-home, .feature-card').forEach((el, index) => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
+            el.style.transition = `all 0.6s ease ${index * 0.1}s`;
             observer.observe(el);
+        });
+
+        // Animate sections on scroll
+        const sections = document.querySelectorAll('.features-section, .catalog-section, .cta-section, .testimonial-section');
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(40px)';
+            section.style.transition = 'all 0.8s ease';
+            observer.observe(section);
+        });
+
+        // Animate section titles
+        const sectionTitles = document.querySelectorAll('.section-title, .section-subtitle');
+        sectionTitles.forEach((title, index) => {
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(20px)';
+            title.style.transition = `all 0.6s ease ${index * 0.2}s`;
+            observer.observe(title);
         });
 
         window.addEventListener('scroll', () => {
