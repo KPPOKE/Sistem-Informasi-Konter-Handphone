@@ -1,4 +1,4 @@
-# 📱 GadgetHub - Sistem Informasi Konter Handphone
+# GadgetHub - Sistem Informasi Konter Handphone
 
 ![GadgetHub](https://img.shields.io/badge/GadgetHub-v1.0-blue)
 ![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php)
@@ -7,15 +7,15 @@
 
 **GadgetHub** adalah sistem informasi manajemen konter handphone berbasis web dengan desain modern dan user-friendly. Aplikasi ini memudahkan pengelolaan produk, transaksi, stok, dan booking pelanggan.
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-### 🏠 **Landing Page (Public)**
+### Landing Page (Public)
 - Katalog produk untuk customer
 - Sistem booking produk dengan WhatsApp
 - Desain modern dan responsive
 - Hero section yang menarik
 
-### 👨‍💼 **Admin Panel**
+### Admin Panel
 - Dashboard dengan statistik real-time
 - Manajemen produk (CRUD)
 - Manajemen kategori
@@ -23,7 +23,7 @@
 - Manajemen user (kasir)
 - Laporan transaksi dengan export
 
-### 💰 **Kasir Panel**
+### Kasir Panel
 - Dashboard kasir dengan quick actions
 - Interface transaksi yang intuitif
 - Product grid dengan search
@@ -31,7 +31,7 @@
 - Riwayat transaksi
 - Sistem pembayaran dengan kembalian otomatis
 
-## 🎨 Design System
+## Design System
 
 - **Theme**: Professional Blue, Flat Modern, Light Mode
 - **Primary Color**: #3B82F6 (Blue)
@@ -39,7 +39,7 @@
 - **UI Framework**: Bootstrap 5.3
 - **Icons**: Font Awesome 6.4
 
-## 🛠️ Teknologi
+## Teknologi
 
 - **Backend**: PHP 7.4+ (MVC Pattern)
 - **Database**: MySQL 8.0+
@@ -48,7 +48,7 @@
 - **Icons**: Font Awesome 6.4
 - **Fonts**: Google Fonts (Inter)
 
-## 📦 Instalasi
+## Instalasi
 
 ### Prerequisites
 - PHP 7.4 atau lebih tinggi
@@ -91,7 +91,7 @@
    - Landing Page: `http://localhost:8000`
    - Login Admin/Kasir: `http://localhost:8000/AuthController`
 
-## 👤 Default Login
+## Default Login
 
 ### Admin
 - **Username**: `admin`
@@ -101,7 +101,7 @@
 - **Username**: `kasir`
 - **Password**: `kasir123`
 
-## 📁 Struktur Project
+## Struktur Project
 
 ```
 gadgethub/
@@ -144,7 +144,7 @@ gadgethub/
 └── README.md
 ```
 
-## 🧪 Testing
+## Testing
 
 Aplikasi ini menggunakan **Property-Based Testing** untuk memastikan correctness:
 
@@ -169,7 +169,7 @@ node -e "const utils = require('./public/js/utils.js'); utils.runAllPropertyTest
 ### Kasir Transaction
 ![Kasir Transaction](docs/screenshots/kasir-transaction.png)
 
-## 🚀 Fitur Mendatang
+## Fitur Mendatang
 
 - [ ] Export laporan ke PDF
 - [ ] Notifikasi WhatsApp otomatis untuk booking
@@ -177,7 +177,7 @@ node -e "const utils = require('./public/js/utils.js'); utils.runAllPropertyTest
 - [ ] Dashboard analytics yang lebih detail
 - [ ] Mobile app (React Native)
 
-## 🤝 Kontribusi
+## Kontribusi
 
 Kontribusi selalu welcome! Silakan:
 1. Fork repository ini
@@ -186,17 +186,3 @@ Kontribusi selalu welcome! Silakan:
 4. Push ke branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
 
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 📧 Kontak
-
-**GadgetHub Team**
-- Email: info@gadgethub.com
-- Website: https://gadgethub.com
-- Phone: 0812-3456-7890
-
----
-
-Made with ❤️ by GadgetHub Team
