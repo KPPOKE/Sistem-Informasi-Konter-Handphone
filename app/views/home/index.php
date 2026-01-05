@@ -977,9 +977,6 @@
             </div>
             <div class="footer-bottom">
                 <div>&copy; 2025 GadgetHub. All rights reserved.</div>
-                <div style="margin-top: 8px; font-size: 12px; opacity: 0.3;">
-                    <a href="<?= BASEURL; ?>/AuthController" style="color: inherit; text-decoration: none;" id="staffLogin">Staff</a>
-                </div>
             </div>
         </div>
     </footer>
