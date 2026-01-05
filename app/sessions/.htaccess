@@ -1,0 +1,5 @@
+# Deny all access to session files
+<Files "*">
+    Order allow,deny
+    Deny from all
+</Files>
